@@ -1,195 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samir Majhi Tharu</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samir Majhi Tharu — Best Creative UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Samir Majhi Tharu, one of the best creative UI/UX designers from Itahari, Nepal." />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#6ee7b7; --glass: rgba(255,255,255,0.04);
+      --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    [data-theme="light"]{
+      --bg:#f6f8fb; --card:#ffffff; --muted:#556074; --accent:#0ea5a4; --glass: rgba(0,0,0,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--font-sans);background:linear-gradient(180deg,var(--bg),#071022);color:var(--muted);-webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;color:#042029;font-weight:700;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:1.4rem;color:buttonface}
+    .tag{font-size:0.86rem;color:var(--muted)}
+    nav{display:flex;gap:12px}
+    a.btn{padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600;background:var(--glass);color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:26px}
+    .card{background:var(--card);border-radius:14px;padding:18px;color:var(--muted);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .profile{display:flex;gap:14px;align-items:center}
+    .avatar{width:86px;height:86px;border-radius:14px;background:linear-gradient(180deg,#0ea5a4,#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:800;color:#022; font-size:1.05rem}
+    .intro h2{margin:0 0 6px 0;color:buttonface}
+    .cta{margin-top:12px;display:flex;gap:10px}
+    .primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#021121;border:none;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:10px 14px;border-radius:10px;color:var(--muted)}
+
+    .section{margin-top:16px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:600}
+
+    .projects{display:grid;gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);}
+    .project h3{margin:0;color:buttonface}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    @media (max-width:980px){
+      main{grid-template-columns:1fr;}
+      .container{margin:18px;padding:16px}
     }
 
-    body {
-      background-color: #f5f5f5;
-      color: #333;
-    }
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:700}
 
-    header {
-      background: #111;
-      color: #fff;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    form{display:flex;flex-direction:column;gap:10px}
+    label{font-size:0.82rem;color:var(--muted)}
+    input,textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:buttonface;resize:vertical}
+    button[type="submit"]{padding:10px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),#60a5fa);font-weight:700}
 
-    header h1 {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #00adb5;
-    }
-
-    section {
-      padding: 80px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    #home {
-      background: linear-gradient(to right, #00adb5, #393e46);
-      color: #fff;
-      padding: 120px 20px;
-    }
-
-    #home h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    #home p {
-      font-size: 1.2rem;
-    }
-
-    #about h2, #blog h2, #contact h2 {
-      margin-bottom: 20px;
-      color: #00adb5;
-    }
-
-    .social-links a {
-      display: inline-block;
-      margin: 10px;
-      text-decoration: none;
-      color: #00adb5;
-      border: 2px solid #00adb5;
-      padding: 8px 16px;
-      border-radius: 25px;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      background: #00adb5;
-      color: #fff;
-    }
-
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 50px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        display: none;
-        background: #111;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-      }
-
-      .menu-toggle div {
-        width: 25px;
-        height: 3px;
-        background: #fff;
-        margin: 5px;
-      }
-    }
-
-    .menu-toggle {
-      display: none;
-    }
+    .fade-up{opacity:0;transform:translateY(8px);animation:fadeUp 600ms forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Samir Majhi Tharu</h1>
-    <div class="menu-toggle" id="menu-toggle">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav>
-      <ul id="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container" id="page">
+    <header class="fade-up">
+      <div class="brand">
+        <div class="logo">SM</div>
+        <div>
+          <h1>Samir Majhi Tharu</h1>
+          <div class="tag">Best Creative UI/UX Designer • Problem Solver</div>
+        </div>
+      </div>
+      <div>
+        <nav>
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <button id="themeToggle" class="btn" aria-label="Toggle theme">Theme</button>
+        </nav>
+      </div>
+    </header>
 
-  <section id="home">
-    <h2>Welcome to My Website</h2>
-    <p>Hi, I’m <strong>Samir Majhi Tharu</strong>. This is my personal website where I share my thoughts, blogs, and ways to connect with me.</p>
-  </section>
+    <main>
+      <section>
+        <div class="card fade-up" style="animation-delay:60ms">
+          <div class="profile">
+            <div class="avatar">SM</div>
+            <div class="intro">
+              <h2>Hello — I'm Samir</h2>
+              <p class="muted">A best creative UI/UX designer focused on crafting intuitive and visually appealing digital experiences. I enjoy turning ideas into elegant, user-centered designs.</p>
+              <div class="cta">
+                <a class="primary" href="#contact">Get in touch</a>
+                <a class="secondary" href="#projects">See projects</a>
+              </div>
+            </div>
+          </div>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>I am <strong>Samir Majhi Tharu</strong>, a passionate individual interested in learning, sharing ideas, and connecting with others online. This website showcases my journey, creativity, and interests.</p>
-  </section>
+          <div class="section">
+            <h3 style="color:buttonface">Skills</h3>
+            <div class="skills">
+              <span class="skill">UI/UX Design</span>
+              <span class="skill">Accessibility</span>
+              <span class="skill">Responsive Design</span>
+              <span class="skill">Git</span>
+            </div>
+          </div>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>Coming soon... Stay tuned for my thoughts, projects, and experiences!</p>
-  </section>
+          <div class="section">
+            <h3 style="color:buttonface">About</h3>
+            <p class="muted">I like creating small, intentional interfaces and learning new tools. This one-file site is an example of keeping things simple while remaining functional and visually refined to show the best UI/UX experience.</p>
+          </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach me via email or through my social media:</p>
-    <p><strong>Email:</strong> <a href="mailto:samirmajhitharu19@gmail.com">samirmajhitharu19@gmail.com</a></p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/samirmajhi0?igsh=Z2ZidWZoNG9udWtz" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/share/1ApdJx9W67/" target="_blank">Facebook</a>
-    </div>
-  </section>
+          <div id="projects" class="section">
+            <h3 style="color:buttonface">Selected projects</h3>
+            <div class="projects">
+              <article class="project">
+                <h3>Personal Portfolio</h3>
+                <p class="muted">A lightweight, single-file portfolio — designed with the best UI/UX principles for speed and usability.</p>
+              </article>
+              <article class="project">
+                <h3>Mini UI Library</h3>
+                <p class="muted">Reusable components and a tiny stylesheet for consistent, clean UI elements that follow top UX standards.</p>
+              </article>
+            </div>
+          </div>
+        </div>
 
-  <footer>
-    <p>Website created by <strong>Samir Majhi Tharu</strong></p>
-  </footer>
+        <div class="card fade-up" style="margin-top:14px;animation-delay:120ms">
+          <h3 style="color:buttonface">Notes</h3>
+          <p class="muted">Feel free to customize colors, fonts, and projects. For a simple deploy: rename this file to <code>index.html</code> and drop it on any static host (GitHub Pages, Netlify, Vercel, etc.).</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card fade-up" style="animation-delay:80ms">
+          <h3 style="color:buttonface">Contact</h3>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Hi Samir — I'd like to..." required></textarea>
+            <button type="submit">Send message</button>
+            <div id="formStatus" class="muted" style="font-size:0.9rem;margin-top:8px"></div>
+          </form>
+        </div>
+
+        <div class="card fade-up" style="margin-top:12px;animation-delay:100ms">
+          <h3 style="color:buttonface">Quick info</h3>
+          <p class="muted"><span class="pill">Location</span> Itahari, Nepal</p>
+          <p class="muted"><span class="pill">Email</span> samirmajhitharu19@gmail.com</p>
+          <p class="muted"><span class="pill">Availability</span> Open to collaboration</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="muted">Created by Samir Majhi Tharu — Best UI/UX Designer</div>
+    </footer>
+  </div>
 
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+    const root = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if(stored){ document.documentElement.setAttribute('data-theme', stored); }
+    const btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', ()=>{
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? '' : 'light';
+      if(next) document.documentElement.setAttribute('data-theme', next); else document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', next);
+    });
 
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      if(!name||!email||!message){ status.textContent = 'Please fill out all fields.'; return; }
+      status.textContent = 'Preparing message...';
+      const subject = encodeURIComponent('Contact from portfolio — ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      const mailto = `mailto:samirmajhitharu19@gmail.com?subject=${subject}&body=${body}`;
+      window.open(mailto, '_blank');
+      status.textContent = 'Opened your email client. If that did not work, copy your message and send it to samirmajhitharu19@gmail.com';
+    });
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{ el.style.animationDelay = (i*60)+'ms'; });
     });
   </script>
 </body>
